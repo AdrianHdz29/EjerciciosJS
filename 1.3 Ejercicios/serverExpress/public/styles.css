@@ -3,23 +3,63 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f4f4f4;
 }
 
 nav {
-    background-color: #333;
-    padding: 10px;
+    background-color: #004d40;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-nav a {
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    font-weight: bold;
 }
 
-nav a:hover {
+.nav-links a:hover {
     text-decoration: underline;
 }
 
+.hero {
+    background: url('https://www.itfcp.edu.mx/images/banners/tecnm.jpg') center/cover no-repeat;
+    color: white;
+    padding: 80px 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
 h1 {
-    color: #333;
+    color: #004d40;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
