@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Nombres de Equipo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 col-md-4">
+        <h1 class="text-center">Generador de Nombres de Equipo</h1>
+        <form action="/submit" method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="adjetivo" class="form-label">Cualidad:</label>
+                <input type="text" class="form-control" id="adjetivo" name="adjetivo" required>
+            </div>
+            <div class="mb-3">
+                <label for="mascota" class="form-label">Mascota preferida:</label>
+                <input type="text" class="form-control" id="mascota" name="mascota" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
