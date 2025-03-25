@@ -1,0 +1,196 @@
+[
+  {
+    "id": "0001",
+    "tipo": "taco",
+    "nombre": "Taco de Carne Asada",
+    "precio": 25.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Res",
+        "preparacion": "Asada"
+      },
+      "salsa": {
+        "nombre": "Salsa roja",
+        "picor": "Alto"
+      },
+      "acompañamientos": [
+        {
+          "nombre": "Cebolla",
+          "cantidad": "1 cucharada",
+          "ingredientes": ["Cebolla morada", "Cilantro", "Limón", "Sal"]
+        },
+        {
+          "nombre": "Pico de gallo",
+          "cantidad": "2 cucharadas",
+          "ingredientes": ["Tomate", "Cebolla", "Cilantro", "Jalapeño", "Limón", "Sal"]
+        }
+      ]
+    }
+  },
+  {
+    "id": "0002",
+    "tipo": "taco",
+    "nombre": "Taco al Pastor",
+    "precio": 22.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Cerdo",
+        "preparacion": "Asado"
+      },
+      "salsa": {
+        "nombre": "Salsa Verde",
+        "picor": "Medio"
+      },
+      "acompañamientos": [
+        {
+          "nombre": "Piña",
+          "cantidad": "1 rebanada"
+        },
+        {
+          "nombre": "Cebolla y cilantro",
+          "cantidad": "1 cucharada"
+        }
+      ]
+    }
+  },
+  {
+    "id": "0003",
+    "tipo": "taco",
+    "nombre": "Taco de Barbacoa",
+    "precio": 30.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Borrego",
+        "preparacion": "Cocido en penca de maguey"
+      },
+      "salsa": {
+        "nombre": "Salsa borracha",
+        "picor": "Medio"
+      },
+      "acompañamientos": [
+        {
+          "nombre": "Cebolla y cilantro",
+          "cantidad": "1 cucharada"
+        }
+      ]
+    }
+  },
+  {
+    "id": "0004",
+    "tipo": "taco",
+    "nombre": "Taco Dorado",
+    "precio": 28.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Pollo",
+        "preparacion": "Frito"
+      },
+      "salsa": {
+        "nombre": "Salsa de Tomate",
+        "picor": "Medio"
+      },
+      "acompañamientos": [
+        {
+          "nombre": "Lechuga rallada",
+          "cantidad": "2 cucharadas"
+        },
+        {
+          "nombre": "Crema",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Queso rallado",
+          "cantidad": "1 cucharada"
+        }
+      ]
+    }
+  },
+    {
+      "id": "0005",
+      "tipo": "torta",
+      "nombre": "Torta de Milanesa de Pollo",
+      "precio": 40.00,
+      "ingredientes": {
+        "pan": "Telera",
+        "relleno": [
+          "Milanesa de pollo",
+          "Aguacate",
+          "Jitomate",
+          "Mayonesa",
+          "Frijoles refritos"
+        ],
+        "extras": ["Queso Oaxaca opcional"]
+      }
+    },
+    {
+      "id": "0006",
+      "tipo": "torta",
+      "nombre": "Torta de Carnitas",
+      "precio": 38.00,
+      "ingredientes": {
+        "pan": "Bolillo",
+        "relleno": [
+          "Carnitas de cerdo",
+          "Chiles en vinagre",
+          "Frijoles refritos"
+        ]
+      }
+    },
+    {
+      "id": "0007",
+      "tipo": "torta",
+      "nombre": "Torta Ahogada",
+      "precio": 42.00,
+      "ingredientes": {
+        "pan": "Birote salado",
+        "relleno": ["Carnitas"],
+        "salsa": {
+          "nombre": "Salsa de chile de árbol",
+          "picor": "Alto"
+        },
+        "acompañamientos": [
+          {
+            "nombre": "Cebolla encurtida",
+            "cantidad": "2 cucharadas"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0008",
+      "tipo": "quesadilla",
+      "nombre": "Quesadilla de Huitlacoche",
+      "precio": 35.00,
+      "ingredientes": {
+        "masa": "Azul o blanca",
+        "relleno": ["Huitlacoche", "Queso Oaxaca"],
+        "extras": ["Epazote"]
+      }
+    },
+    {
+      "id": "0009",
+      "tipo": "quesadilla",
+      "nombre": "Quesadilla de Flor de Calabaza",
+      "precio": 32.00,
+      "ingredientes": {
+        "masa": "Azul o blanca",
+        "relleno": ["Flor de calabaza", "Queso Oaxaca"],
+        "extras": ["Epazote"]
+      }
+    },
+    {
+      "id": "0010",
+      "tipo": "quesadilla",
+      "nombre": "Quesadilla de Chicharrón Prensado",
+      "precio": 36.00,
+      "ingredientes": {
+        "masa": "Azul o blanca",
+        "relleno": ["Chicharrón prensado", "Queso Oaxaca"],
+        "salsa": {
+          "nombre": "Salsa roja",
+          "picor": "Alto"
+        }
+      }
+    }
+  ]
+  
