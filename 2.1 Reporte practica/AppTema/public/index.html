@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experto Temas</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <h1>Temas 🎒</h1>
+    <form id="Form" class="buttons">
+        <div>
+            <button type="button" data-type="Python">🧑‍💻</button>
+            <h4>Python</h4>
+        </div>
+        <div>
+            <button type="button" data-type="SQL">🗒️</button>
+            <h4>SQL</h4>
+        </div>
+        <div>
+            <button type="button" data-type="HTML">🌐</button>
+            <h4>HTML y CSS</h4>
+        </div>
+        <div>
+            <button type="button" data-type="Redes">🛜</button>
+            <h4>Redes</h4>
+        </div>
+        <div>
+            <button type="button" data-type="Seguridad">🔐</button>
+            <h4>Seguridad Informática</h4>
+        </div>
+        <div>
+            <button type="button" data-type="IA">🤖</button>
+            <h4>IA</h4>
+        </div>
+    </form>
+    <div id="Container"></div>
+    <script>
+        document.querySelectorAll("#Form button").forEach(button => {
+          button.addEventListener("click", async (event) => {
+            const type = event.target.getAttribute("data-type").toLowerCase();
+            
+          
+            const response = await fetch(`/tema/${type}`);
+            const tema = await response.json();
+    
+    
+            const contenedor = document.getElementById("Container"); 
+            if (tema.error) {
+              contenedor.innerHTML = "<h2>Tema no encontrado</h2>"; //si no se recupera el contenido HTML de un elemento.
+            } else {
+              contenedor.innerHTML = `
+                <h2>${tema.Nombre}</h2> 
+                <h3>Descripción:</h3>
+                <p>${tema.Descripción}</p>
+                <h3>Palabras clave:</h3>
+                <ul id="pclaves">
+                ${tema["Palabras claves"].map(palabra => `<li>${palabra}</li>`).join("")}</ul>
+                <h3>Prácticas:</h3>
+                <ul id="practicas">
+                ${tema.Prácticas.map(practica => `
+                    <li>
+                        <strong>Título:</strong> ${practica.Título}
+                        <ul>
+                            <li><strong>Descripción:</strong> ${practica.Descripción}</li>
+                            <li><strong>Objetivo:</strong> ${practica.Objetivo}</li>
+                        </ul>
+                    </li>
+                `).join("")}
+                </ul>
+                `;
+            }
+          });
+        });
+      </script>
+</body>
+</html>
