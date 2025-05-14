@@ -24,6 +24,53 @@ app.post('/usuarios', async (req, res) => {
     }
 });
 
+app.put('/usuario/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        const usuario = await Usuario.findByIdAndUpdate(id, req.body);
+        if(!usuario){
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+        const usuarioActualizado = await Usuario.findById(id);
+        res.status(200).json(usuarioActualizado);
+        console.log(usuarioActualizado);
+    } catch (error) {
+    }
+});
+
+app.delete('/usuario/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        const usuario = await Usuario.findByIdAndDelete(id);
+        if(!usuario) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+        res.status(200).json({ message: 'Usuario eliminado' });
+    } catch (error) {
+    }
+});
+
+app.get('/usuarios', async (req, res) => {
+    try {
+        const usuarios = await Usuario.find();
+        res.status(200).json(usuarios);
+    } catch (error) {
+        console.error("Error al obtener los usuarios:", error);
+        res.status(500).json({
+            error: 'Error al obtener los usuarios'
+        });
+    }
+});
+
+app.get('/usuario/:id', async (req, res) => {
+    try {
+        const { id } = req.params; // Extrae el ID de los parámetros de la solicitud
+        const usuario = await Usuario.findById(id);
+        res.status(200).json(usuario);
+    } catch(error) {
+    }
+});
+
 app.listen(puerto, () => {
     console.log(`Servidor escuchando en http://localhost:${puerto}`);
 });
